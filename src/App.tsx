@@ -39,88 +39,134 @@ const movies = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <div className="max-w-xl mx-auto px-5 py-12">
+    <div className="min-h-screen bg-black">
+      <div className="max-w-md mx-auto px-6 py-16">
         {/* Header */}
-        <header className="mb-6">
-          <div className="flex items-center gap-2 mb-3">
-            <div className="h-px w-8 bg-white/20" />
-            <span className="text-[10px] uppercase tracking-[0.2em] text-white/40 font-medium">
-              Feb 13
+        <header className="mb-12">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="h-[1px] w-12 bg-gradient-to-r from-white/0 via-white/30 to-white/0" />
+            <span className="text-[11px] uppercase tracking-[0.25em] text-white/35 font-light">
+              Feb 13, 2025
             </span>
           </div>
-          <h1 className="text-[32px] leading-[1.1] font-medium tracking-tight mb-2">
+          <h1 className="text-[38px] font-light tracking-[-0.02em] text-white mb-3 leading-[1.05]">
             Valentine Movie Night
           </h1>
-          <p className="text-[15px] text-white/50 leading-relaxed">
-            Four films back to back
+          <p className="text-white/45 text-[14px] font-light tracking-wide">
+            Four films · One unforgettable evening
           </p>
         </header>
 
-        {/* Movies */}
-        <div className="space-y-12">
+        {/* Movies Grid */}
+        <div className="space-y-16">
           {movies.map((movie, index) => (
             <article key={index} className="group">
-              {/* Image */}
-              <div className="relative aspect-[2/3] rounded-2xl overflow-hidden mb-5 bg-white/5">
-                <img
-                  src={movie.poster}
-                  alt={movie.title}
-                  className="w-full h-full object-cover"
-                />
-
-                {/* Minimal rating badge */}
-                <div className="absolute top-4 right-4 h-9 px-3 rounded-full bg-black/60 backdrop-blur-xl flex items-center gap-1.5">
-                  <span className="text-[13px] font-medium">★</span>
-                  <span className="text-[13px] font-medium">
-                    {movie.rating}
-                  </span>
+              {/* Poster */}
+              <div className="relative mb-6">
+                <div className="aspect-[2/3] rounded-3xl overflow-hidden bg-zinc-900 ring-1 ring-white/5">
+                  <img
+                    src={movie.poster}
+                    alt={movie.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
-                {/* Number indicator */}
-                <div className="absolute bottom-4 left-4 w-8 h-8 rounded-full bg-white/10 backdrop-blur-xl flex items-center justify-center border border-white/10">
-                  <span className="text-[13px] font-semibold">{index + 1}</span>
-                </div>
-              </div>
-
-              {/* Details */}
-              <div className="space-y-4">
-                <div>
-                  <h2 className="text-[22px] font-medium tracking-tight mb-1.5 leading-tight">
-                    {movie.title}
-                  </h2>
-                  <div className="flex items-center gap-2 text-[13px] text-white/40">
-                    <span>{movie.meta}</span>
-                    <span>·</span>
-                    <span>{movie.duration}</span>
+                {/* Floating badges */}
+                <div className="absolute top-5 right-5 flex flex-col gap-2">
+                  {/* Rating */}
+                  <div className="h-11 px-4 rounded-2xl bg-black/70 backdrop-blur-2xl flex items-center gap-2 ring-1 ring-white/10">
+                    <svg
+                      className="w-4 h-4 text-amber-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    <span className="text-white text-[14px] font-medium tracking-tight">
+                      {movie.rating}
+                    </span>
                   </div>
                 </div>
 
-                {/* Time */}
-                <div className="flex items-baseline gap-2">
-                  <span className="text-[13px] text-white/40">Showtime</span>
-                  <span className="text-[15px] font-medium">{movie.time}</span>
+                {/* Screen number */}
+                <div className="absolute bottom-5 left-5">
+                  <div className="w-11 h-11 rounded-2xl bg-white/95 backdrop-blur-sm flex items-center justify-center ring-1 ring-black/5">
+                    <span className="text-black text-[15px] font-semibold">
+                      {index + 1}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Info */}
+              <div className="px-1">
+                <h2 className="text-white text-[26px] font-normal tracking-[-0.01em] mb-2 leading-tight">
+                  {movie.title}
+                </h2>
+
+                {/* Meta row */}
+                <div className="flex items-center gap-2 mb-5">
+                  <span className="text-white/40 text-[13px] font-light">
+                    {movie.meta}
+                  </span>
+                  <span className="text-white/20">·</span>
+                  <span className="text-white/40 text-[13px] font-light">
+                    {movie.duration}
+                  </span>
                 </div>
 
-                {/* Button */}
-                <button className="w-full h-12 rounded-xl bg-white text-black text-[14px] font-medium tracking-wide hover:bg-white/90 active:scale-[0.98] transition-all">
+                {/* Showtime */}
+                <div className="mb-6 py-4 px-5 rounded-2xl bg-white/[0.03] ring-1 ring-white/5">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
+                        <svg
+                          className="w-5 h-5 text-white/60"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1.5}
+                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-[11px] text-white/35 uppercase tracking-wider mb-0.5">
+                          Showtime
+                        </p>
+                        <p className="text-white text-[15px] font-medium tracking-tight">
+                          {movie.time}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="px-3 py-1.5 rounded-lg bg-emerald-500/10 ring-1 ring-emerald-500/20">
+                      <span className="text-emerald-400 text-[11px] font-medium uppercase tracking-wider">
+                        Available
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CTA */}
+                <button className="w-full h-14 rounded-2xl bg-white text-black text-[15px] font-medium tracking-tight hover:bg-white/95 active:scale-[0.985] transition-all duration-200 shadow-lg shadow-white/5">
                   Buy Ticket
                 </button>
               </div>
-
-              {/* Divider */}
-              {index < movies.length - 1 && (
-                <div className="mt-12 h-px bg-white/5" />
-              )}
             </article>
           ))}
         </div>
 
-        {/* Footer */}
-        <footer className="mt-16 pt-8 border-t border-white/5">
-          <p className="text-[12px] text-white/30 text-center leading-relaxed">
-            Limited capacity · Doors open 30 min early
-          </p>
+        {/* Footer info */}
+        <footer className="mt-20 pt-10 border-t border-white/5">
+          <div className="flex items-center justify-center gap-6 text-white/25 text-[11px] uppercase tracking-widest">
+            <span>Limited Seating</span>
+            <div className="w-1 h-1 rounded-full bg-white/20" />
+            <span>Doors 8:30 PM</span>
+          </div>
         </footer>
       </div>
     </div>
