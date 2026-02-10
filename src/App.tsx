@@ -1,7 +1,7 @@
 const movies = [
   {
     title: "Mike and Dave",
-    meta: "Comedy",
+    meta: "Comedy • Romance • Party Chaos",
     time: "9:00 PM – 10:50 PM",
     duration: "110 min",
     rating: "9.6",
@@ -12,7 +12,7 @@ const movies = [
   },
   {
     title: "Without Remorse",
-    meta: "Romance • Drama",
+    meta: "Action • Thriller • Military Drama",
     time: "11:00 PM – 12:50 AM",
     duration: "112 min",
     rating: "8.9",
@@ -23,7 +23,7 @@ const movies = [
   },
   {
     title: "Marked Men",
-    meta: "Action",
+    meta: "Romance • Drama • Forbidden Love",
     time: "1:00 AM – 2:50 AM",
     duration: "118 min",
     rating: "9.4",
@@ -34,7 +34,7 @@ const movies = [
   },
   {
     title: "Evil Dead Rise",
-    meta: "Horror",
+    meta: "Horror • Supernatural • Survival",
     time: "3:00 AM – 4:00 AM",
     duration: "108 min",
     rating: "9.5",
@@ -54,11 +54,11 @@ export default function Home() {
     <div className="min-h-screen bg-black">
       <div className="max-w-md mx-auto px-6 py-16">
         {/* Header */}
-        <header className="mb-12">
+        <header className="mb-6">
           <div className="flex items-center gap-3 mb-4">
             <div className="h-[1px] w-12 bg-gradient-to-r from-white/0 via-white/30 to-white/0" />
             <span className="text-[11px] uppercase tracking-[0.25em] text-white/35 font-light">
-              Feb 13, 2025
+              Feb 11, 2025
             </span>
           </div>
           <h1 className="text-[38px] font-light tracking-[-0.02em] text-white mb-3 leading-[1.05]">
