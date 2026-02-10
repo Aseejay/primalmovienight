@@ -157,7 +157,7 @@ export default function Home() {
                     </div>
                     <div className="px-3 py-1.5 rounded-lg bg-emerald-500/10 ring-1 ring-emerald-500/20">
                       <span className="text-emerald-400 text-[11px] font-medium uppercase tracking-wider">
-                        Available
+                        Faculty
                       </span>
                     </div>
                   </div>
