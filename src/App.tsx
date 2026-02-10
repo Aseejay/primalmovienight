@@ -4,7 +4,7 @@ const movies = [
     meta: "Comedy",
     time: "9:00 PM – 10:50 PM",
     duration: "110 min",
-    rating: "6.5",
+    rating: "9.6",
     poster:
       "https://image.tmdb.org/t/p/original/2qVWrNSaIq1eYODj1St6lsgaoQS.jpg",
   },
@@ -13,7 +13,7 @@ const movies = [
     meta: "Romance • Drama",
     time: "11:00 PM – 12:50 AM",
     duration: "112 min",
-    rating: "6.7",
+    rating: "8.9",
     poster:
       "https://image.tmdb.org/t/p/original/6GCOpT8QcNzup09TAMmvvk22LTR.jpg",
   },
@@ -22,7 +22,7 @@ const movies = [
     meta: "Action",
     time: "1:00 AM – 2:50 AM",
     duration: "118 min",
-    rating: "7.4",
+    rating: "9.4",
     poster:
       "https://image.tmdb.org/t/p/original/hGPiYGCQ6IQHPSsp08jY4gCIRxL.jpg",
   },
@@ -31,7 +31,7 @@ const movies = [
     meta: "Horror",
     time: "3:00 AM – 4:00 AM",
     duration: "108 min",
-    rating: "6.8",
+    rating: "9.5",
     poster:
       "https://image.tmdb.org/t/p/original/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
   },
@@ -46,7 +46,7 @@ export default function Home() {
           <div className="flex items-center gap-2 mb-3">
             <div className="h-px w-8 bg-white/20" />
             <span className="text-[10px] uppercase tracking-[0.2em] text-white/40 font-medium">
-              Feb 14
+              Feb 13
             </span>
           </div>
           <h1 className="text-[32px] leading-[1.1] font-medium tracking-tight mb-2">
