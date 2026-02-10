@@ -7,6 +7,8 @@ const movies = [
     rating: "9.6",
     poster:
       "https://image.tmdb.org/t/p/original/2qVWrNSaIq1eYODj1St6lsgaoQS.jpg",
+    singleTicketLink: "https://example.com/single-ticket-mike-dave",
+    doubleTicketLink: "https://example.com/double-ticket-mike-dave",
   },
   {
     title: "Without Remorse",
@@ -16,6 +18,8 @@ const movies = [
     rating: "8.9",
     poster:
       "https://image.tmdb.org/t/p/original/6GCOpT8QcNzup09TAMmvvk22LTR.jpg",
+    singleTicketLink: "https://example.com/single-ticket-without-remorse",
+    doubleTicketLink: "https://example.com/double-ticket-without-remorse",
   },
   {
     title: "Marked Men",
@@ -25,6 +29,8 @@ const movies = [
     rating: "9.4",
     poster:
       "https://image.tmdb.org/t/p/original/hGPiYGCQ6IQHPSsp08jY4gCIRxL.jpg",
+    singleTicketLink: "https://example.com/single-ticket-marked-men",
+    doubleTicketLink: "https://example.com/double-ticket-marked-men",
   },
   {
     title: "Evil Dead Rise",
@@ -34,10 +40,16 @@ const movies = [
     rating: "9.5",
     poster:
       "https://image.tmdb.org/t/p/original/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
+    singleTicketLink: "https://example.com/single-ticket-evil-dead",
+    doubleTicketLink: "https://example.com/double-ticket-evil-dead",
   },
 ];
 
 export default function Home() {
+  const handleTicketClick = (url: any) => {
+    window.open(url, "_blank");
+  };
+
   return (
     <div className="min-h-screen bg-black">
       <div className="max-w-md mx-auto px-6 py-16">
@@ -151,10 +163,47 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* CTA */}
-                <button className="w-full h-14 rounded-2xl bg-white text-black text-[15px] font-medium tracking-tight hover:bg-white/95 active:scale-[0.985] transition-all duration-200 shadow-lg shadow-white/5">
-                  Buy Ticket
-                </button>
+                {/* Dual Ticket Buttons */}
+                <div className="flex gap-3">
+                  <button
+                    onClick={() => handleTicketClick(movie.singleTicketLink)}
+                    className="flex-1 h-14 rounded-2xl bg-white text-black text-[14px] font-medium tracking-tight hover:bg-white/95 active:scale-[0.985] transition-all duration-200 shadow-lg shadow-white/5 flex items-center justify-center gap-2"
+                  >
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                      />
+                    </svg>
+                    <span>Single Ticket</span>
+                  </button>
+                  <button
+                    onClick={() => handleTicketClick(movie.doubleTicketLink)}
+                    className="flex-1 h-14 rounded-2xl bg-white text-black text-[14px] font-medium tracking-tight hover:bg-white/95 active:scale-[0.985] transition-all duration-200 shadow-lg shadow-white/5 flex items-center justify-center gap-2"
+                  >
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                    <span>Double Ticket</span>
+                  </button>
+                </div>
               </div>
             </article>
           ))}
