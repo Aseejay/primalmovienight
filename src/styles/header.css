@@ -1,0 +1,140 @@
+.container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:#122315CC;
+    padding-bottom: 20px;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+
+header a {
+    font: 14px;
+    text-decoration: none;
+}
+header a img {
+    width: 130px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+}
+
+header ul li {
+    margin-right: 40px;
+}
+
+header a.download {
+    animation: pulse 1.5s infinite 2s;
+    background: #55DD4A;
+    color: #181B20;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: 1px solid #F3EDE4;
+    border-radius: 30px;
+}
+
+.menubar svg {
+    width: 20px;
+}
+
+.menubar {
+    display: none;
+}
+
+.sidebar ul  {
+    list-style: none;
+    text-align: left;
+    margin: 0px;
+    padding-left: 20px;
+    padding-top: 40px;
+    padding-right: 30px;
+  
+}
+
+.sidebar ul li {
+    padding-top: 30px;
+    border-bottom:1px solid #F3EDE41A;
+   padding-bottom: 20px;
+    margin-bottom: 60px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color:#F3EDE4;
+    font-size: 17px;
+    font-weight: 400;
+ 
+    padding: 14px 30px;
+    border-radius: 30px;
+
+}
+.sidebar .top {
+padding: 25px;
+
+position: relative;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.sidebar .top a.contact-us {
+    background: #55DD4A;
+    color: #181B20;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: 1px solid #F3EDE4;
+    border-radius: 30px;
+}
+
+
+
+.sidebar .top img.close{
+width: 30px;
+}
+.sidebar a.logo  img {
+    width: 120px;
+}
+
+
+.ant-drawer {
+    font-family:inter;
+    padding: 0px;
+ 
+    color: #586283;
+}
+.ant-drawer .ant-drawer-body {
+   padding: 0PX;
+   background-color: #122315;
+   color: white;
+}
+
+.ant-drawer .ant-drawer-header {
+   display: none;
+}
+
+
+@media (max-width:1000px) {
+    .menubar {
+        display: block;
+    }
+ header ul {
+    display: none;
+ }
+}

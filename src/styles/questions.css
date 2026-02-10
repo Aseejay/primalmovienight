@@ -1,0 +1,97 @@
+.background-two {
+background-color: #73D3EB;
+color: #181B20;
+text-align: center;
+padding-bottom: 70px;
+padding-top: 110px;
+}
+
+.background-two p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #5F80A0;
+}
+.background-two .questions p{
+    color: #181B20;
+}
+
+.background-two h4 {
+    font-size: 64px;
+    width: 50%;
+    line-height: 75px;
+    font-weight: 700;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.background-two .questions {
+    padding-top: 60px;
+    width: 60%;
+    margin: 0 auto;
+}
+.background-two .questions .question {
+    border-bottom: 1px solid #181B200A;
+    text-align: left;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.background-two .questions .question .title {
+    display: flex;
+   
+    justify-content: space-between;
+}
+
+.background-two .questions .question .title p {
+    line-height: 30px;
+    font-size: 16px;
+}
+.background-two .questions .question .left {
+    display: flex;
+    gap: 10px;
+}
+
+.background-two .questions .question .right {
+    display: flex;
+}
+
+
+.background-two .question p.desc{
+    color:black;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 30px;
+    opacity: 0;
+    transition: padding 0.5s ease,opacity 0.5s ease-in-out;
+}
+
+.background-two .question .visible p.desc{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-weight: 300;
+    opacity: 1;
+
+}
+
+.background-two svg {
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+
+.background-two .visible svg{
+    transform: rotate(180deg);
+}
+
+@media (max-width:1000px) {
+
+    .background-two h4 {
+        font-size: 50px;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .background-two .questions{
+        width: 80%;
+    }
+}
