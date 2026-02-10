@@ -7,8 +7,8 @@ const movies = [
     rating: "9.6",
     poster:
       "https://image.tmdb.org/t/p/original/2qVWrNSaIq1eYODj1St6lsgaoQS.jpg",
-    singleTicketLink: "https://example.com/single-ticket-mike-dave",
-    doubleTicketLink: "https://example.com/double-ticket-mike-dave",
+    singleTicketLink: "https://paystack.shop/pay/rs1h-s727b",
+    doubleTicketLink: "https://paystack.shop/pay/iiyhffr31y",
   },
   {
     title: "Without Remorse",
@@ -18,8 +18,8 @@ const movies = [
     rating: "8.9",
     poster:
       "https://image.tmdb.org/t/p/original/6GCOpT8QcNzup09TAMmvvk22LTR.jpg",
-    singleTicketLink: "https://example.com/single-ticket-without-remorse",
-    doubleTicketLink: "https://example.com/double-ticket-without-remorse",
+    singleTicketLink: "https://paystack.shop/pay/u-78zj5ae1",
+    doubleTicketLink: "https://paystack.shop/pay/0r-b-ym3a5",
   },
   {
     title: "Marked Men",
@@ -29,8 +29,8 @@ const movies = [
     rating: "9.4",
     poster:
       "https://image.tmdb.org/t/p/original/hGPiYGCQ6IQHPSsp08jY4gCIRxL.jpg",
-    singleTicketLink: "https://example.com/single-ticket-marked-men",
-    doubleTicketLink: "https://example.com/double-ticket-marked-men",
+    singleTicketLink: "https://paystack.shop/pay/ex4z9b3s66",
+    doubleTicketLink: "https://paystack.shop/pay/q6v0b40u-g",
   },
   {
     title: "Evil Dead Rise",
@@ -40,8 +40,8 @@ const movies = [
     rating: "9.5",
     poster:
       "https://image.tmdb.org/t/p/original/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg",
-    singleTicketLink: "https://example.com/single-ticket-evil-dead",
-    doubleTicketLink: "https://example.com/double-ticket-evil-dead",
+    singleTicketLink: "https://paystack.shop/pay/kt0uq084np",
+    doubleTicketLink: "https://paystack.shop/pay/pyzj73ndmn",
   },
 ];
 
