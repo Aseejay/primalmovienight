@@ -58,7 +58,7 @@ export default function Home() {
           <div className="flex items-center gap-3 mb-4">
             <div className="h-[1px] w-12 bg-gradient-to-r from-white/0 via-white/30 to-white/0" />
             <span className="text-[11px] uppercase tracking-[0.25em] text-white/35 font-light">
-              Feb 11, 2025
+              Feb 11, 2026
             </span>
           </div>
           <h1 className="text-[38px] font-light tracking-[-0.02em] text-white mb-3 leading-[1.05]">
