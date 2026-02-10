@@ -42,7 +42,7 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white">
       <div className="max-w-xl mx-auto px-5 py-12">
         {/* Header */}
-        <header className="mb-14">
+        <header className="mb-6">
           <div className="flex items-center gap-2 mb-3">
             <div className="h-px w-8 bg-white/20" />
             <span className="text-[10px] uppercase tracking-[0.2em] text-white/40 font-medium">
@@ -104,7 +104,7 @@ export default function Home() {
 
                 {/* Button */}
                 <button className="w-full h-12 rounded-xl bg-white text-black text-[14px] font-medium tracking-wide hover:bg-white/90 active:scale-[0.98] transition-all">
-                  Reserve seat
+                  Buy Ticket
                 </button>
               </div>
 
